@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Under the Sea - Complete Project</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)),
+                        url('images/ocean-bg.jpg') center/cover fixed;
+            color: var(--white-foam);
+            min-height: 100vh;
+        }
+
+        .page-section {
+            margin: 4rem 0;
+            padding: 2rem;
+            border: 1px solid var(--light-blue);
+            border-radius: 8px;
+            background-color: rgba(0, 51, 102, 0.9);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .page-title {
+            background-color: var(--deep-ocean);
+            color: var(--white-foam);
+            padding: 1rem;
+            margin: -2rem -2rem 2rem -2rem;
+            border-radius: 8px 8px 0 0;
+            border-bottom: 2px solid var(--coral);
+        }
+
+        .navigation-links {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(179, 224, 255, 0.95);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+            max-width: 400px;
+            border: 1px solid var(--light-blue);
+        }
+
+        .navigation-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .navigation-links li {
+            margin: 0;
+            flex: 0 0 auto;
+        }
+
+        .navigation-links a {
+            color: var(--deep-ocean);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            display: block;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .navigation-links a:hover {
+            color: var(--white-foam);
+            background-color: var(--coral);
+        }
+
+        iframe {
+            background-color: var(--white-foam);
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h3 {
+            color: var(--coral);
+            margin-top: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--light-blue);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 51, 102, 0.2);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--coral);
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--seaweed);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Quick Navigation -->
+        <nav class="navigation-links">
+            <ul>
+                <li><a href="#splash">Splash</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#volunteer">Volunteer</a></li>
+                <li><a href="#table">Table</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#sitemap">Sitemap</a></li>
+                <li><a href="#content">Content</a></li>
+                <li><a href="#validation">Validation</a></li>
+            </ul>
+        </nav>
+
+        <!-- Splash Screen -->
+        <section id="splash" class="page-section">
+            <h2 class="page-title">Splash Screen</h2>
+            <iframe src="splash.html" width="100%" height="600px" frameborder="0"></iframe>
+        </section>
+
+        <!-- Home Page -->
+        <section id="home" class="page-section">
+            <h2 class="page-title">Home Page</h2>
+            <iframe src="home.html" width="100%" height="800px" frameborder="0"></iframe>
+        </section>
+
+        <!-- Volunteer Page -->
+        <section id="volunteer" class="page-section">
+            <h2 class="page-title">Volunteer Page</h2>
+            <iframe src="volunteer.html" width="100%" height="800px" frameborder="0"></iframe>
+        </section>
+
+        <!-- Table Page -->
+        <section id="table" class="page-section">
+            <h2 class="page-title">Marine Life Data</h2>
+            <iframe src="table.html" width="100%" height="800px" frameborder="0"></iframe>
+        </section>
+
+        <!-- Profile Page -->
+        <section id="profile" class="page-section">
+            <h2 class="page-title">User Profile</h2>
+            <iframe src="profile.html" width="100%" height="800px" frameborder="0"></iframe>
+        </section>
+
+        <!-- Feedback Page -->
+        <section id="feedback" class="page-section">
+            <h2 class="page-title">Feedback Form</h2>
+            <iframe src="feedback.html" width="100%" height="800px" frameborder="0"></iframe>
+        </section>
+
+        <!-- Team Page -->
+        <section id="team" class="page-section">
+            <h2 class="page-title">Our Team</h2>
+            <iframe src="team.html" width="100%" height="800px" frameborder="0"></iframe>
+        </section>
+
+        <!-- Sitemap -->
+        <section id="sitemap" class="page-section">
+            <h2 class="page-title">Sitemap</h2>
+            <iframe src="sitemap.html" width="100%" height="800px" frameborder="0"></iframe>
+        </section>
+
+        <!-- Content Pages -->
+        <section id="content" class="page-section">
+            <h2 class="page-title">Content Pages</h2>
+            
+            <div class="page-section">
+                <h3>Marine Mammals</h3>
+                <iframe src="content1.html" width="100%" height="800px" frameborder="0"></iframe>
+            </div>
+
+            <div class="page-section">
+                <h3>Coral Reefs</h3>
+                <iframe src="content2.html" width="100%" height="800px" frameborder="0"></iframe>
+            </div>
+
+            <div class="page-section">
+                <h3>Deep Sea Life</h3>
+                <iframe src="content3.html" width="100%" height="800px" frameborder="0"></iframe>
+            </div>
+
+            <div class="page-section">
+                <h3>Ocean Conservation</h3>
+                <iframe src="content4.html" width="100%" height="800px" frameborder="0"></iframe>
+            </div>
+        </section>
+
+        <!-- Validation Pages -->
+        <section id="validation" class="page-section">
+            <h2 class="page-title">Validation Documentation</h2>
+            
+            <div class="page-section">
+                <h3>Student 1 Validation</h3>
+                <iframe src="validation1.html" width="100%" height="600px" frameborder="0"></iframe>
+            </div>
+
+            <div class="page-section">
+                <h3>Student 2 Validation</h3>
+                <iframe src="validation2.html" width="100%" height="600px" frameborder="0"></iframe>
+            </div>
+
+            <div class="page-section">
+                <h3>Student 3 Validation</h3>
+                <iframe src="validation3.html" width="100%" height="600px" frameborder="0"></iframe>
+            </div>
+
+            <div class="page-section">
+                <h3>Student 4 Validation</h3>
+                <iframe src="validation4.html" width="100%" height="600px" frameborder="0"></iframe>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Adjust iframe heights based on content
+        document.querySelectorAll('iframe').forEach(iframe => {
+            iframe.onload = function() {
+                this.style.height = this.contentWindow.document.documentElement.scrollHeight + 'px';
+            }
+        });
+    </script>
+</body>
+</html> 

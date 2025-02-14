@@ -1,0 +1,485 @@
+/* Global Reset hi  */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Color Variables */
+:root {
+    --deep-ocean: #003366;
+    --medium-blue: #0077be;
+    --light-blue: #b3e0ff;
+    --coral: #ff7f50;
+    --sand: #f4d03f;
+    --white-foam: #ffffff;
+    --seaweed: #2ecc71;
+    --dark-depth: #1a1a1a;
+}
+
+/* Typography */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-depth);
+    background-color: var(--white-foam);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', serif;
+    color: var(--deep-ocean);
+    margin-bottom: 1rem;
+}
+
+/* Layout Components */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styling */
+header {
+    background-color: var(--deep-ocean);
+    color: var(--white-foam);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: var(--medium-blue);
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: var(--white-foam);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--deep-ocean);
+    color: var(--sand);
+}
+
+nav ul li a.active {
+    background-color: var(--coral);
+    color: var(--white-foam);
+}
+
+/* Main Content Area */
+main {
+    min-height: 70vh;
+    padding: 2rem 0;
+}
+
+/* Footer */
+footer {
+    background-color: var(--deep-ocean);
+    color: var(--white-foam);
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+/* Common Components */
+.button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--coral);
+    color: var(--white-foam);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--seaweed);
+    transform: translateY(-2px);
+}
+
+/* Form Elements */
+input, textarea, select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--medium-blue);
+    border-radius: 4px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+th, td {
+    padding: 0.8rem;
+    border: 1px solid var(--medium-blue);
+    text-align: left;
+}
+
+th {
+    background-color: var(--medium-blue);
+    color: var(--white-foam);
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Cards */
+.card {
+    background-color: var(--white-foam);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+/* Accessibility */
+:focus {
+    outline: 3px solid var(--coral);
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    header, nav, footer {
+        display: none;
+    }
+
+    body {
+        color: black;
+        background: white;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* Footer Additions */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+.footer-section h3 {
+    color: var(--sand);
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: var(--light-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--coral);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--medium-blue);
+    padding-top: 1rem;
+    text-align: center;
+}
+
+/* Additional Responsive Footer Styles */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-section {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Home Page Specific Styles */
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+    background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)),
+                url('images/ocean-hero.jpg') center/cover;
+    color: var(--white-foam);
+    border-radius: 8px;
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--white-foam);
+    margin-bottom: 1.5rem;
+}
+
+.mission-statement {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.info-card {
+    background-color: var(--light-blue);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.cta {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: var(--deep-ocean);
+    color: var(--white-foam);
+    border-radius: 8px;
+    margin: 3rem 0;
+}
+
+.cta h2 {
+    color: var(--white-foam);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+/* Responsive adjustments for home page */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .mission-statement {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-buttons .button {
+        width: 80%;
+    }
+}
+
+/* Additional page-specific styles */
+
+/* Volunteer Page */
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.signup-form.hidden {
+    display: none;
+}
+
+/* Feedback Page */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 2rem;
+    color: var(--medium-blue);
+    cursor: pointer;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: var(--coral);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Team Page */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.role {
+    color: var(--medium-blue);
+    font-style: italic;
+    margin: 0.5rem 0;
+}
+
+/* Profile Page */
+.profile-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.profile-info {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Sitemap Page */
+.sitemap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.sitemap-group h2 {
+    color: var(--deep-ocean);
+    margin-bottom: 1rem;
+}
+
+.sitemap-group ul {
+    list-style: none;
+}
+
+.sitemap-group ul li {
+    margin-bottom: 0.5rem;
+}
+
+.sitemap-group a {
+    color: var(--medium-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.sitemap-group a:hover {
+    color: var(--coral);
+}
+
+/* Data Tables */
+.data-section {
+    margin-bottom: 3rem;
+}
+
+.data-section table {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .team-member img,
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+
+    .rating label {
+        font-size: 1.5rem;
+    }
+} 

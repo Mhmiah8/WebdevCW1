@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Life Under the Sea</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .splash-screen {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0, 51, 102, 0.9), rgba(0, 51, 102, 0.9)),
+                        url('images/splash-bg.jpg') center/cover;
+            color: var(--white-foam);
+        }
+        
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid var(--light-blue);
+            border-radius: 50%;
+            border-top-color: var(--coral);
+            animation: spin 1s linear infinite;
+            margin: 2rem 0;
+        }
+        
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                window.location.href = 'home.html';
+            }, 4000);
+        }
+    </script>
+</head>
+<body>
+    <div class="splash-screen fade-in">
+        <img src="images/logo.png" alt="Life Under the Sea Logo" class="logo">
+        <div class="loader"></div>
+        <h1>Welcome to Life Under the Sea</h1>
+        <p>Discovering the wonders of marine life...</p>
+    </div>
+</body>
+</html> 

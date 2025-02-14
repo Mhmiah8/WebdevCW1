@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Life Under the Sea</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header and Nav from template -->
+    <main>
+        <div class="container">
+            <h1>User Profile</h1>
+            
+            <section class="profile-section">
+                <div class="profile-header">
+                    <img src="images/default-avatar.jpg" alt="Profile Picture" class="profile-picture">
+                    <button class="button">Change Picture</button>
+                </div>
+
+                <div class="profile-info">
+                    <form id="profileForm">
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" value="OceanExplorer" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" value="explorer@ocean.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="interests">Marine Interests:</label>
+                            <select id="interests" multiple>
+                                <option selected>Coral Reefs</option>
+                                <option selected>Marine Mammals</option>
+                                <option>Deep Sea Life</option>
+                                <option>Conservation</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bio">Bio:</label>
+                            <textarea id="bio" rows="4">Passionate about marine life and ocean conservation.</textarea>
+                        </div>
+
+                        <button type="submit" class="button">Update Profile</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- Footer from template -->
+</body>
+</html> 

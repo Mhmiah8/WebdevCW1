@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer - Life Under the Sea</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header and Nav from template -->
+    <main>
+        <div class="container">
+            <h1>Volunteer Programs</h1>
+            
+            <section class="volunteer-programs">
+                <div class="program-grid">
+                    <div class="card">
+                        <img src="images/beach-cleanup.jpg" alt="Beach Cleanup">
+                        <h3>Beach Cleanup</h3>
+                        <p>Join our monthly beach cleanup initiatives to protect marine life.</p>
+                        <button class="button signup-btn" data-program="beach">Sign Up</button>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="images/coral-restoration.jpg" alt="Coral Restoration">
+                        <h3>Coral Restoration</h3>
+                        <p>Help restore damaged coral reefs through our diving programs.</p>
+                        <button class="button signup-btn" data-program="coral">Sign Up</button>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="images/education.jpg" alt="Education Programs">
+                        <h3>Education Programs</h3>
+                        <p>Educate visitors about marine conservation.</p>
+                        <button class="button signup-btn" data-program="education">Sign Up</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="signup-form hidden">
+                <h2>Volunteer Sign Up</h2>
+                <form id="volunteerForm">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Phone Number">
+                    <select required>
+                        <option value="">Select Program</option>
+                        <option value="beach">Beach Cleanup</option>
+                        <option value="coral">Coral Restoration</option>
+                        <option value="education">Education Programs</option>
+                    </select>
+                    <textarea placeholder="Why would you like to volunteer?"></textarea>
+                    <button type="submit" class="button">Submit</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <!-- Footer from template -->
+</body>
+</html> 
